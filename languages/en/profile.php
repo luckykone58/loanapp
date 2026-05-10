@@ -1,0 +1,61 @@
+<?php
+
+return [
+	'title' => [
+		'application_status' => 'Application Status',
+		'personal_info' => 'Personal Information',
+		'id_verification' => 'ID Verification',
+		'bank_info' => 'Bank Information',
+		'signature' => 'Signature',
+		'reference_1' => 'Reference 1',
+		'reference_2' => 'Reference 2',
+		'view_submitted_info' => 'View submitted information',
+	],
+	'steps' => [
+		'personal_info' => 'Personal Information',
+		'id_verification' => 'ID Verification',
+		'bank_info' => 'Bank Information',
+		'signature' => 'Signature',
+	],
+	'status' => [
+		'completed' => 'Completed',
+		'incomplete' => 'Incomplete',
+	],
+	'text' => [
+		'complete_steps' => 'Complete these steps to get approved',
+		'progress_done' => ':percent% Done',
+		'id_verification_hint' => 'Please upload your National ID or Passport to verify your identity.',
+		'add_disbursement_account' => 'Add your disbursement account',
+		'sign_agreement' => 'Sign your loan agreement',
+		'view_submitted_info_hint' => 'Click the buttons below to review your submitted information.',
+	],
+	'label' => [
+		'full_name' => 'Full Name',
+		'email' => 'Email/ Phone',
+		'address' => 'Address',
+		'company' => 'Company',
+		'company_address' => 'Company Address',
+		'position' => 'Position',
+		'monthly_income' => 'Monthly Income',
+		'contact_1_person' => 'Name',
+		'contact_1_phone' => 'Phone',
+		'contact_1_relativity' => 'Relationship',
+		'contact_2_person' => 'Name',
+		'contact_2_phone' => 'Phone',
+		'contact_2_relativity' => 'Relationship',
+		'id_number' => 'ID Number',
+		'id_front' => 'ID Front',
+		'id_back' => 'ID Back',
+		'id_selfie' => 'ID Selfie',
+		'bank_name' => 'Bank Name',
+		'bank_number' => 'Bank Account Number',
+		'upload_signature' => 'Sign your signature.',
+	],
+	'button' => [
+		'start_verification' => 'Start Verification',
+		'update_info' => 'Update Info',
+		'save' => 'Save',
+		'continue_profile' => 'Continue to Profile',
+	],
+];
+
