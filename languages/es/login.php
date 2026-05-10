@@ -15,6 +15,7 @@ return [
         'password' => 'Ingrese una contraseña segura',
     ],
     'text' => [
+        'welcome_back' => 'Bienvenido de nuevo',
         'subtitle' => 'Inicia sesión con tus credenciales.',
         'new_user' => '¿Eres nuevo?',
     ],

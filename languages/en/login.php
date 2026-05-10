@@ -15,6 +15,7 @@ return [
         'password' => 'Enter secure password',
     ],
     'text' => [
+        'welcome_back' => 'Welcome Back',
         'subtitle' => 'Sign in with your credentials.',
         'new_user' => 'New user?',
     ],
@@ -26,7 +27,6 @@ return [
         'register' => 'Create an Account',
     ],
 ];
-
 
 
 

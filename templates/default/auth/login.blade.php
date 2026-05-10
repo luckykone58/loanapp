@@ -38,6 +38,7 @@
 				</svg>
 				<h1 class="text-3xl font-extrabold text-gray-900 mt-4 tracking-tight">{{ __('login.title.heading') }}</h1>
 			@endif
+			<h1 class="text-2xl font-bold text-gray-900 mt-4">{{ __('login.text.welcome_back') }}</h1>
             <p class="text-sm text-gray-500 mt-1">{{ __('login.text.subtitle') }}</p>
 		</div>
 		@else
@@ -46,6 +47,7 @@
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
 			</svg>
 			<h1 class="text-3xl font-extrabold text-gray-900 mt-4 tracking-tight">{{ __('login.title.heading') }}</h1>
+			<h1 class="text-2xl font-bold text-gray-900 mt-4">{{ __('login.text.welcome_back') }}</h1>
 			<p class="text-sm text-gray-500 mt-1">{{ __('login.text.subtitle') }}</p>
 		</div>
 		@endif
@@ -117,4 +119,3 @@
 	</div>
 </body>
 </html>
-

@@ -15,6 +15,7 @@ return [
         'password' => '安全なパスワードを入力',
     ],
     'text' => [
+        'welcome_back' => 'お帰りなさい',
         'subtitle' => '資格情報でサインインしてください。',
         'new_user' => '初めての方？',
     ],
