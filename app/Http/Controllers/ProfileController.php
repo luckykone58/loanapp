@@ -77,7 +77,7 @@ class ProfileController extends Controller
 			]);
 		} catch (\Throwable $e) {}
 
-		return back()->with('success', 'Profile updated.');
+		return redirect()->route($this->nextProfileRouteName('personal'));
 	}
 
 	public function editId()
@@ -119,7 +119,7 @@ class ProfileController extends Controller
 			]);
 		} catch (\Throwable $e) {}
 
-		return back()->with('success', 'ID information updated.');
+		return redirect()->route($this->nextProfileRouteName('id'));
 	}
 
 	public function editBank()
@@ -154,7 +154,7 @@ class ProfileController extends Controller
 			]);
 		} catch (\Throwable $e) {}
 
-		return back()->with('success', 'Bank information updated.');
+		return redirect()->route($this->nextProfileRouteName('bank'));
 	}
 
 	public function editSignature()
@@ -220,7 +220,32 @@ class ProfileController extends Controller
 			]);
 		} catch (\Throwable $e) {}
 
-		return back()->with('success', 'Signature updated.');
+		return redirect()->route($this->nextProfileRouteName('signature'));
+	}
+
+	protected function nextProfileRouteName(string $currentStep): string
+	{
+		$stepsOrder = ['personal'];
+		$reqs = Settings::getJson('loan_requirements', []);
+
+		if (!empty($reqs['id_number']) || !empty($reqs['id_front']) || !empty($reqs['id_back']) || !empty($reqs['id_selfie'])) {
+			$stepsOrder[] = 'id';
+		}
+		if (!empty($reqs['bank_name']) || !empty($reqs['bank_account'])) {
+			$stepsOrder[] = 'bank';
+		}
+		if (!empty($reqs['signature'])) {
+			$stepsOrder[] = 'signature';
+		}
+
+		$currentIndex = array_search($currentStep, $stepsOrder, true);
+		if ($currentIndex === false) {
+			return 'profile';
+		}
+
+		$nextStep = $stepsOrder[$currentIndex + 1] ?? null;
+
+		return $nextStep ? 'profile.'.$nextStep : 'profile';
 	}
 
 	protected function userProfileDir($user): string
