@@ -41,7 +41,7 @@
 		@if($showLoginLogo === '1')
 		<div class="text-center mb-10 mt-12 sm:mt-0">
 			@if($logoUrl)
-				<img src="{{ $logoUrl }}" alt="{{ $currentDomain->name ?? config('app.name') }}" class="h-12 mx-auto object-contain">
+				<img src="{{ $logoUrl }}" alt="{{ $currentDomain->name ?? config('app.name') }}" class="h-[120px] max-w-full mx-auto object-contain">
 			@else
 				<svg class="w-12 h-12 text-primary-teal mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>

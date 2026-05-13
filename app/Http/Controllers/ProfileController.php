@@ -220,7 +220,7 @@ class ProfileController extends Controller
 			]);
 		} catch (\Throwable $e) {}
 
-		return redirect()->route($this->nextProfileRouteName('signature'));
+		return redirect()->route('loan');
 	}
 
 	protected function nextProfileRouteName(string $currentStep): string
